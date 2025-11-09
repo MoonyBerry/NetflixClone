@@ -2,9 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 body {
-  background: black;
   color: white;
+}
+
+a {
+  color: inherit;
 }
