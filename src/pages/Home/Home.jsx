@@ -4,6 +4,7 @@ import hero_banner from "/hero-banner.jpg";
 import hero_title from "../../assets/hero-title.png";
 import play_icon from "../../assets/play-icon.png";
 import info_icon from "../../assets/info-icon.png";
+import TitleCards from "../../components/TitleCards/TitleCards";
 
 export default function Home() {
   return (
@@ -58,6 +59,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <TitleCards />
     </div>
   );
 }
