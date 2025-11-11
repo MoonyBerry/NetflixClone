@@ -1,3 +1,7 @@
+.home {
+  position: relative;
+}
+
 /* STYILING HERO */
 .hero {
   position: relative;
@@ -12,12 +16,12 @@
 
 .hero-main_container {
   position: absolute;
-  bottom: 25%;
+  bottom: 35%;
   width: 36%;
   left: 60px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.5vh;
   font-size: 1.2vw;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
 }
@@ -45,7 +49,7 @@
   text-shadow: none;
   text-decoration: none;
   font-weight: 700;
-  padding: 11px 34px 11px 28px;
+  padding: 1vh 1.5vw 1vh 1vw;
   margin: 0 14px 14px 0;
   border-radius: 8px;
   transition: background 0.1s ease-in-out;
@@ -68,6 +72,13 @@
 
 .hero-button_info:hover {
   background: #2d3737b7;
+}
+
+@media screen and (min-width: 2100px) {
+  .hero-button_play,
+  .hero-button_info {
+    font-size: 0.8vw;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -97,10 +108,18 @@
   .hero-button_play,
   .hero-button_info {
     font-size: 1.5vw;
+    margin-bottom: 0;
+    margin-right: 5px;
   }
 
   .play-icon,
   .info-icon {
-    width: 14px;
+    width: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero-main_container {
+    left: 15px;
   }
 }
