@@ -6,11 +6,8 @@
   justify-content: center;
   gap: 20px;
   padding: 0 0px 20px 60px;
-
   max-width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  margin-bottom: 1%;
 }
 
 .titlecards-title {
@@ -38,20 +35,31 @@
 .titlecards-container li {
   list-style: none;
   position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+
+.titlecards-container li:hover {
+  transform: scale(0.9);
 }
 
 .titlecards-card {
   text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .card-img {
   width: 15vw;
+  border-radius: 8px;
 }
 
 .titlecards-card p {
   position: absolute;
   bottom: 10%;
   left: 5%;
+  width: 90%;
+  overflow: hidden;
   font-size: 1vw;
   text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.7);
 }
@@ -72,10 +80,6 @@
   .card-img {
     width: 22vw;
   }
-
-  .titlecards {
-    bottom: -10%;
-  }
 }
 
 @media screen and (max-width: 885px) {
@@ -93,18 +97,14 @@
   .card-img {
     width: 30vw;
   }
-
-  .titlecards {
-    bottom: -20%;
-  }
 }
 
 @media screen and (max-width: 500px) {
   .titlecards {
     padding-left: 15px;
     padding-bottom: 0;
-    bottom: -30%;
     gap: 10px;
+    margin-bottom: 5%;
   }
 
   .titlecards-container {
@@ -125,7 +125,6 @@
   .titlecards {
     padding-left: 30px;
     padding-bottom: 0;
-    bottom: -20%;
     gap: 10px;
   }
 }

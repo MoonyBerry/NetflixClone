@@ -12,6 +12,8 @@
   mask-image: linear-gradient(to left, black 70%, transparent 100%),
     linear-gradient(to bottom, black 70%, transparent 98%);
   mask-composite: intersect;
+  max-height: 110vh;
+  object-fit: cover;
 }
 
 .hero-main_container {
@@ -103,6 +105,7 @@
   .hero-main_container {
     left: 30px;
     gap: 0.5vh;
+    bottom: 45%;
   }
 
   .hero-button_play,
