@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./TitleCards.css";
-import cards_data from "../../assets/cards/Cards-data.js";
 
-export default function TitleCards() {
+export default function TitleCards({ title, films }) {
+  const [apiData, setApiData] = useState([]);
+
   /* to make cards scroll */
   const cardsRef = useRef();
 
@@ -11,25 +12,42 @@ export default function TitleCards() {
     cardsRef.current.scrollLeft += e.deltaY;
   };
 
+  const options = {
+    method: "GET",
+    headers: {
+      accept: "application/json",
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhMmNkNjE4NTFiNDhmNGNkNTg1YWNhYzIxMmM4ZjcyNiIsIm5iZiI6MTc2MzA0ODI0NC45MzI5OTk4LCJzdWIiOiI2OTE1ZmIzNGQyY2Q0ZTU3MTc0MGUyNTEiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.zTCn-1a0JSJtO9tbnACwv09kR6drAdV-md37QDBeFE8",
+    },
+  };
+
   useEffect(() => {
+    fetch(
+      `https://api.themoviedb.org/3/movie/${films}?language=en-US&page=1`,
+      options
+    )
+      .then((res) => res.json())
+      .then((res) => setApiData(res.results || []))
+      .catch((err) => console.error(err));
+
     cardsRef.current.addEventListener("wheel", handleWheel);
   }, []);
 
   return (
     <div className="titlecards">
-      <h1 className="titlecards-title">Popolari su Netflix</h1>
+      <h1 className="titlecards-title">{title}</h1>
       <ul className="titlecards-container" ref={cardsRef}>
-        {cards_data.map((card, index) => {
+        {apiData.map((card, index) => {
           return (
             <li key={index}>
-              <a className="titlecards-card" href={`#${card.name}`}>
+              <a className="titlecards-card" href={`#${card.original_title}`}>
                 <img
                   className="card-img"
-                  src={card.image}
-                  alt={card.name}
-                  title={card.name}
+                  src={`https://image.tmdb.org/t/p/w500` + card.backdrop_path}
+                  alt={card.original_title}
+                  title={card.original_title}
                 />
-                <p>{card.name}</p>
+                <p>{card.original_title}</p>
               </a>
             </li>
           );

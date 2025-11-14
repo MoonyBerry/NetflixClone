@@ -58,8 +58,14 @@ export default function Home() {
             </a>
           </div>
         </div>
+        <TitleCards title={"Popolari su Netflix"} films={"top_rated"} />
       </div>
-      <TitleCards />
+      <div className="hero-cards">
+        <TitleCards title={"I più amati dal pubblico"} films={"now_playing"} />
+        <TitleCards title={"Solo su Netflix"} films={"popular"} />
+        <TitleCards title={"In arrivo"} films={"upcoming"} />
+        <TitleCards title={"Pensiamo ti appassioneranno"} films={"top_rated"} />
+      </div>
     </div>
   );
 }
