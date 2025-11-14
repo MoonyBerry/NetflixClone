@@ -5,6 +5,7 @@ import hero_title from "../../assets/hero-title.png";
 import play_icon from "../../assets/play-icon.png";
 import info_icon from "../../assets/info-icon.png";
 import TitleCards from "../../components/TitleCards/TitleCards";
+import Footer from "../../components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -65,6 +66,9 @@ export default function Home() {
         <TitleCards title={"Solo su Netflix"} films={"popular"} />
         <TitleCards title={"In arrivo"} films={"upcoming"} />
         <TitleCards title={"Pensiamo ti appassioneranno"} films={"top_rated"} />
+      </div>
+      <div className="footer-wrapper">
+        <Footer />
       </div>
     </div>
   );
