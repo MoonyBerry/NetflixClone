@@ -27,68 +27,68 @@ export default function Footer() {
       </div>
       <ul className="footer-list">
         <li>
-          <a href="#" className="footer-item">
+          <a href="#audiodescrizione" className="footer-item">
             Audiodescrizione
           </a>
         </li>
         <li>
-          <a href="#" className="footer-item">
+          <a href="#assistenza" className="footer-item">
             Centro assistenza
           </a>
         </li>
         <li>
-          <a href="#" className="footer-item">
+          <a href="#giftcard" className="footer-item">
             Carte regalo
           </a>
         </li>
         <li>
-          <a href="#" className="footer-item">
+          <a href="#media" className="footer-item">
             Media Center
           </a>
         </li>
         <li>
-          <a href="#" className="footer-item">
+          <a href="#investor" className="footer-item">
             Rapporti con gli investitori
           </a>
         </li>
         <li>
-          <a href="#" className="footer-item">
+          <a href="#lavoraconnoi" className="footer-item">
             Opportunità di lavoro
           </a>
         </li>
         <li>
-          <a href="#" className="footer-item">
+          <a href="#condizioni" className="footer-item">
             Condizioni di utilizzo
           </a>
         </li>
         <li>
-          <a href="#" className="footer-item">
+          <a href="#privacy" className="footer-item">
             Privacy
           </a>
         </li>
 
         <li>
-          <a href="#" className="footer-item">
+          <a href="#notelegali" className="footer-item">
             Note legali
           </a>
         </li>
         <li>
-          <a href="#" className="footer-item">
+          <a href="#cookie" className="footer-item">
             Preferenze per i cookie
           </a>
         </li>
         <li>
-          <a href="#" className="footer-item">
-            informazioni sull'azienda
+          <a href="#infoazienda" className="footer-item">
+            Informazioni sull'azienda
           </a>
         </li>
         <li>
-          <a href="#" className="footer-item">
+          <a href="#contatti" className="footer-item">
             Contattaci
           </a>
         </li>
         <li>
-          <a href="#" className="footer-item">
+          <a href="#pubblicita" className="footer-item">
             Preferenze per la pubblicità
           </a>
         </li>

@@ -7,6 +7,8 @@
   width: 980px;
   max-width: 980px;
   gap: 14px;
+  color: grey;
+  padding: 0 4%;
 }
 
 .footer-contacts {
@@ -27,10 +29,29 @@
   align-items: flex-start;
   font-size: 13px;
   margin: 0 0 14px;
-  color: gray;
 }
 
 .footer-list li {
   flex-basis: 25%;
   margin-bottom: 16px;
+  padding-right: 22px;
+  font-size: 13px;
+}
+
+.footer-list a {
+  text-decoration: none;
+}
+
+.footer-list a:hover{
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  align-self: flex-start;
+}
+
+@media screen and (max-width: 800px){
+  .footer-list li {
+  flex: 0 0 50%;
+}
 }
