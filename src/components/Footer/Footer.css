@@ -1,0 +1,36 @@
+/* STYLING FOOTER */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 980px;
+  max-width: 980px;
+  gap: 14px;
+}
+
+.footer-contacts {
+  align-self: start;
+}
+
+.footer-contacts img {
+  width: 24px;
+  margin-right: 15px;
+  margin-left: 10px;
+}
+
+.footer-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  flex-direction: row;
+  align-items: flex-start;
+  font-size: 13px;
+  margin: 0 0 14px;
+  color: gray;
+}
+
+.footer-list li {
+  flex-basis: 25%;
+  margin-bottom: 16px;
+}
