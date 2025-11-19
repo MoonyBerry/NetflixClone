@@ -7,7 +7,7 @@ import youtube_icon from "../../assets/youtube-icon.png";
 
 export default function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer">
       <div className="footer-contacts">
         <a href="https://www.facebook.com/netflixitalia/" target="_blank">
           <img src={facebook_icon} alt="facebook" title="facebook" />
@@ -94,6 +94,6 @@ export default function Footer() {
         </li>
       </ul>
       <div className="footer-copyright">© 1997-2025 Netflix, Inc.</div>
-    </div>
+    </footer>
   );
 }
