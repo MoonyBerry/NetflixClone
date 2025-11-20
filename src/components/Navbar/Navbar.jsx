@@ -158,7 +158,7 @@ export default function Navbar() {
                 </a>
               </li>
               <li>
-                <a className="navbar-logout" href="#logout">
+                <a className="navbar-logout" href="/login">
                   Esci da Netflix
                 </a>
               </li>
