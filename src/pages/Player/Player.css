@@ -35,3 +35,38 @@
 .player-info {
   font-size: 1rem;
 }
+
+@media screen and (max-width: 1550px) {
+  .player-goback {
+    width: 40px;
+    top: 10px;
+    left: 10px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .player-info {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 885px) {
+  .player-trailer {
+    height: 50%;
+  }
+
+  .player-info_container p:nth-child(2) {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .player-trailer {
+    height: 65%;
+    width: 80%;
+  }
+
+  .player-info_container {
+    width: 80%;
+  }
+}

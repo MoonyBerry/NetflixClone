@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./TitleCards.css";
 import { Link } from "react-router";
 
@@ -40,9 +40,12 @@ export default function TitleCards({ title, films }) {
       <ul className="titlecards-container" ref={cardsRef}>
         {apiData.map((card, index) => {
           return (
-            <Link to={`/player/${card.id}`}>
-              <li key={index}>
-                <a className="titlecards-card" href={`#${card.original_title}`}>
+            <Link to={`/player/${card.id}`} key={index}>
+              <li>
+                <div
+                  className="titlecards-card"
+                  href={`#${card.original_title}`}
+                >
                   <img
                     className="card-img"
                     src={`https://image.tmdb.org/t/p/w500` + card.backdrop_path}
@@ -50,7 +53,7 @@ export default function TitleCards({ title, films }) {
                     title={card.original_title}
                   />
                   <p>{card.original_title}</p>
-                </a>
+                </div>
               </li>
             </Link>
           );

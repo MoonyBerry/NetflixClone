@@ -1,6 +1,6 @@
 import "./Player.css";
 import go_back from "../../assets/back-arrow-icon.png";
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 
@@ -38,7 +38,7 @@ export default function Player() {
     <div className="player">
       <img
         onClick={() => {
-          navigate(-2);
+          navigate("/");
         }}
         className="player-goback"
         src={go_back}
