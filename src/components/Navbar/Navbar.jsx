@@ -7,11 +7,24 @@ import profile_icon from "../../assets/profile-img.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencil } from "@fortawesome/free-solid-svg-icons";
 import { faUser, faCircleQuestion } from "@fortawesome/free-regular-svg-icons";
+import { useEffect, useRef } from "react";
 
 export default function Navbar() {
+  const navRef = useRef();
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY >= 80) {
+        navRef.current.classList.add("navbar-dark");
+      } else {
+        navRef.current.classList.remove("navbar-dark");
+      }
+    });
+  }, []);
+
   return (
     /* NAVBAR */
-    <nav className="navbar" role="navigation">
+    <nav className="navbar" ref={navRef} role="navigation">
       {/* -------------------NAVBAR LEFT SIDE------------------- */}
       <div className="navbar-left">
         <img
